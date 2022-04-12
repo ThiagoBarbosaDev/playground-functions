@@ -81,47 +81,57 @@ function encode(string) {
   // seu código aqui
   let l33t = '';
   for (letter of string) {
-    if (letter === "a") {
+    if (letter === 'a') {
       l33t += 1;
-    } else if (letter === "e") {
+    } else if (letter === 'e') {
       l33t += 2;
-    } else if (letter === "i") {
+    } else if (letter === 'i') {
       l33t += 3;
-    } else if (letter === "o") {
+    } else if (letter === 'o') {
       l33t += 4;
-    } else if (letter === "u") {
+    } else if (letter === 'u') {
       l33t += 5;
     } else {
       l33t += letter;
     }
   }
-  return l33t
+  return l33t;
 }
 
 function decode(string) {
   // seu código aqui
   let l33t = '';
   for (letter of string) {
-    if (letter === "1") {
-      l33t += "a";
-    } else if (letter === "2") {
-      l33t += "e";
-    } else if (letter === "3") {
-      l33t += "i";
-    } else if (letter === "4") {
-      l33t += "o";
-    } else if (letter === "5") {
-      l33t += "u";
+    if (letter === '1') {
+      l33t += 'a';
+    } else if (letter === '2') {
+      l33t += 'e';
+    } else if (letter === '3') {
+      l33t += 'i';
+    } else if (letter === '4') {
+      l33t += 'o';
+    } else if (letter === '5') {
+      l33t += 'u';
     } else {
       l33t += letter;
     }
   }
-  return l33t
+  return l33t;
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let list = [];
+  if (tech[0] === undefined) {
+    return 'Vazio!';
+  }
+  let sortedTech = tech.sort();
+
+  for (elemento of sortedTech) {
+    list.push({ tech: elemento, name: name });
+  }
+  return list;
 }
 
 module.exports = {
