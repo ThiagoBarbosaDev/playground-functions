@@ -2,7 +2,7 @@
 function compareTrue() {
   // seu código aqui
 }
-
+// commit inicial
 // Desafio 2
 function calcArea() {
   // seu código aqui
